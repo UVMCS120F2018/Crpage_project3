@@ -33,7 +33,8 @@ public:
     int get_books_read();
     int get_fights_won();
     size get_beak_size();
-    bool get_is_dead;
+    bool is_octopus_dead();
+
 
     /*SETTERS*/
 
@@ -61,7 +62,7 @@ public:
      * octopus attempts to open box.
      * if the iq is below 80 it wont open.
      */
-    void open_box();
+    bool open_box();
 
     /*!
      * iq is raised 20 points
@@ -74,6 +75,38 @@ public:
      * @return integer value of intelegence
      */
     int iq_stat();
+
+    /*OVERLOADING OPERATOR*/
+    /*!
+     * Makes two octopus fight. Depending on which one has a higher inegrated iq or beak size
+     * that octopus will win
+     * @param oct1 Octopus
+     * @param oct2 Octopus
+     */
+    friend void operator * (Octopus &oct1, Octopus &oct2);
+
+    /*!
+     * Prints the stats of an octopus
+     * @param print
+     * @param oct1 Octopus
+     * @return statement printed out
+     */
+    friend ostream& operator << (ostream& print, const Octopus& oct1);
+
+    /*!
+     * Returns true if octopus have the same beak size, false if not.
+     * @param oct1 Octopus
+     * @param oct2 Octopus
+     * @return Bool
+     */
+    friend bool operator == (Octopus &oct1, Octopus& oct2);
+
+    /*!
+     * Makes both Octopus read a book.
+     * @param oct1 Octopus
+     * @param oct2 Octopus
+     */
+    friend void operator + (Octopus &oct1, Octopus &oct2);
 
 };
 
