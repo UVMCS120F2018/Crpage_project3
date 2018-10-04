@@ -16,6 +16,7 @@ class Tank {
     double height;
     double width;
     vector<Octopus> inhabitants;
+
 public:
     Tank(double depth, double height, double width);
 
