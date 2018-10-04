@@ -32,6 +32,7 @@ public:
      * returns the volume of the tank
      */
     double calculate_volume();
+    void add_octopus(Octopus);
 };
 
 

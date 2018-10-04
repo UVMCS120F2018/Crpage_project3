@@ -30,3 +30,7 @@ vector<Octopus> Tank ::get_inhabitants() {
 double Tank ::calculate_volume() {
     return depth*height*width;
 }
+
+void Tank ::add_octopus(Octopus oct) {
+    inhabitants.push_back(oct);
+}

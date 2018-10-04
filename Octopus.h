@@ -7,27 +7,32 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 enum size {SMALL, MEDUIM, LARGE};
-struct Leg {
-    double length;
-    int viability;
+struct IQ {
+    int intelegence;
+    int books_read;
+    int fights_won;
 
 };
 
 class Octopus {
     int legs;
-    int iq;
+    IQ iq;
     size beak_size;
     bool is_dead;
+    bool is_hungry;
 
 public:
-    Octopus(size beak_size, int legs);
+    Octopus(size beak_size);
 
     /*GETTERS*/
     int get_legs();
     int get_iq();
+    int get_books_read();
+    int get_fights_won();
     size get_beak_size();
 
     /*SETTERS*/
@@ -48,6 +53,7 @@ public:
     /*!
      * increases iq level by 7
      * if iq is already 100 wont increase
+     * adds one to number of books read
      */
     void read_book();
 
@@ -56,6 +62,18 @@ public:
      * if the iq is below 80 it wont open.
      */
     void open_box();
+
+    /*!
+     * iq is raised 20 points
+     * if a leg is not viable regains viability
+     */
+    void win_fight();
+
+    /*!
+     * adds intelegence, books read, and fights won together.
+     * @return integer value of intelegence
+     */
+    int iq_stat();
 
 };
 
