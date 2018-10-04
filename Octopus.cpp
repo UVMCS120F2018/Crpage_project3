@@ -36,6 +36,10 @@ size Octopus ::get_beak_size() {
     return beak_size;
 }
 
+bool Octopus :: get_is_dead(){
+    return is_dead;
+}
+
 /*METHODS*/
 void Octopus ::loose_leg() {
     if (legs <= 1){

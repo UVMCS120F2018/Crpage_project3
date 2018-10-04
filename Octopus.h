@@ -10,7 +10,7 @@
 #include <vector>
 using namespace std;
 
-enum size {SMALL, MEDUIM, LARGE};
+enum size {SMALL, MEDIUM, LARGE};
 struct IQ {
     int intelegence;
     int books_read;
@@ -23,7 +23,6 @@ class Octopus {
     IQ iq;
     size beak_size;
     bool is_dead;
-    bool is_hungry;
 
 public:
     Octopus(size beak_size);
@@ -34,6 +33,7 @@ public:
     int get_books_read();
     int get_fights_won();
     size get_beak_size();
+    bool get_is_dead;
 
     /*SETTERS*/
 
