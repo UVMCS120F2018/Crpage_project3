@@ -10,6 +10,7 @@
 
 /*!
  * Depth, Height and Width can not be negative
+ * MUST BE POSITIVE VALUES
  */
 class Tank {
     double depth;
