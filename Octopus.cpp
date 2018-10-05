@@ -43,6 +43,7 @@ bool Octopus::is_octopus_dead() {
 /*METHODS*/
 void Octopus ::loose_leg() {
     if (legs <= 1){
+        legs = 0;
         is_dead = true;
     }else{
         legs = legs-1;
@@ -50,19 +51,17 @@ void Octopus ::loose_leg() {
 }
 
 void Octopus ::read_book() {
-    if (iq.intelegence < 100){
-        iq.intelegence = iq.intelegence + 7;
-        cout << "Your octopus just got smarter!" << endl;
-        iq.books_read = iq.books_read +1;
-    }
+    iq.intelegence = iq.intelegence + 7;
+//    cout << "Your octopus just got smarter!" << endl;
+    iq.books_read = iq.books_read +1;
 }
 
 bool Octopus ::open_box() {
     if (iq.intelegence > 80){
-        cout << "Your Octopus is smart enough to open a box and get the food!" << endl;
+//        cout << "Your Octopus is smart enough to open a box and get the food!" << endl;
         return true;
     }else{
-        cout << "Sorry, your Octopus needs to read more books" << endl;
+//        cout << "Sorry, your Octopus needs to read more books" << endl;
         return false;
     }
 }

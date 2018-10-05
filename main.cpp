@@ -33,18 +33,29 @@ void tank_options(){
 
         if (choice == "a" | choice == "A"){
             henry.read_book();
+            cout << "Henry just got smarter!" << endl << endl;
 
         }else if (choice == "b" | choice == "B"){
             george.read_book();
-
+            cout << "George just got smarter!" << endl << endl;
         }else if (choice == "c" | choice == "C"){
             henry * george;
 
         }else if (choice == "d" | choice == "D"){
             box_is_open = henry.open_box();
+            if (box_is_open){
+                cout << " NICE JOB!"<<endl;
+            }else{
+                cout << "Henry isn't smart enough to open the box yet... try reading some books..." << endl;
+            }
 
         }else if (choice == "e" | choice == "E"){
             box_is_open = george.open_box();
+            if (box_is_open){
+                cout << " NICE JOB!"<< endl;
+            }else{
+                cout << "George isn't smart enough to open the box yet... try reading some books..."  << endl;
+            }
 
         }else if (choice == "f" | choice == "F"){
             cout << george;
