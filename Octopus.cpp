@@ -49,12 +49,6 @@ void Octopus ::loose_leg() {
     }
 }
 
-void Octopus ::grow_leg() {
-    if (legs < 8){
-        legs = legs + 1;
-    }
-}
-
 void Octopus ::read_book() {
     if (iq.intelegence < 100){
         iq.intelegence = iq.intelegence + 7;

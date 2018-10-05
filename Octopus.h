@@ -46,12 +46,6 @@ public:
     void loose_leg();
 
     /*!
-     * leg increases in value by 1
-     * if legs = 8 wont add more
-     */
-    void grow_leg();
-
-    /*!
      * increases iq level by 7
      * if iq is already 100 wont increase
      * adds one to number of books read
