@@ -12,7 +12,7 @@ using namespace std;
 
 enum size {SMALL, MEDIUM, LARGE};
 struct IQ {
-    int intelegence;
+    int smartness;
     int books_read;
     int fights_won;
 

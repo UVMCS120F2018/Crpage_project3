@@ -7,7 +7,7 @@
 /*CONSTRUCTORS*/
 
 Octopus ::Octopus(size beak_size) {
-    iq.intelegence = 50;
+    iq.smartness = 50;
     iq.fights_won = 0;
     iq.books_read = 0;
     is_dead = false;
@@ -21,7 +21,7 @@ int Octopus ::get_legs() {
 }
 
 int Octopus ::get_iq() {
-    return iq.intelegence;
+    return iq.smartness;
 }
 
 int Octopus ::get_books_read() {
@@ -51,13 +51,13 @@ void Octopus ::loose_leg() {
 }
 
 void Octopus ::read_book() {
-    iq.intelegence = iq.intelegence + 7;
+    iq.smartness = iq.smartness + 7;
 //    cout << "Your octopus just got smarter!" << endl;
     iq.books_read = iq.books_read +1;
 }
 
 bool Octopus ::open_box() {
-    if (iq.intelegence > 80){
+    if (iq.smartness > 80){
 //        cout << "Your Octopus is smart enough to open a box and get the food!" << endl;
         return true;
     }else{
@@ -71,7 +71,7 @@ void Octopus ::win_fight() {
 }
 
 int Octopus ::iq_stat() {
-    int overall = iq.intelegence + iq.books_read + iq.fights_won;
+    int overall = iq.smartness + iq.books_read + iq.fights_won;
     return overall;
 }
 
@@ -110,7 +110,7 @@ ostream &operator<<(ostream &print, const Octopus &oct1) {
     print << "Legs :" << oct1.legs <<endl;
     print << "Fights Won : " << oct1.iq.fights_won <<endl;
     print << "Books Read : " << oct1.iq.books_read <<endl;
-    print << "Inelegance : " << oct1.iq.intelegence <<endl;
+    print << "Inelegance : " << oct1.iq.smartness <<endl;
     print << "Life Status : " << (oct1.is_dead ? "Dead" : "Alive") << endl;
 
     return print;
