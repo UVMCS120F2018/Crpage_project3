@@ -1,8 +1,8 @@
-####Crpage_project3
+#### Crpage_project3
 
-#Octopuses in a Tank
+# Octopuses in a Tank
 
-###Overview
+### Overview
 I chose to create an Octopus class. They are my favorite animal so I 
 decided it would be great to spend time working with them.
 Octopus are some of the smartest animals on the planet so I decided to make a 
@@ -22,7 +22,7 @@ I decided to overload four operators:
 - "=="
 - "+"
 
-###"*"
+### "*"
 This operator make two octopus fight. It compares their integrated iq levels 
 and the one with the large wins. If they have the same iq then the octopus with a large 
 beak wins. If their beak size is the same, its a tie. 
@@ -49,7 +49,7 @@ if it's different, false.
 This operator makes both octopus read a book at the same time. I like to call this one 
 "Study Time".
 
-###Enums
+### Enums
 
 I created an enum called size for the beak size of an Octopus.
 This enum can take on 3 values:
@@ -60,7 +60,7 @@ This enum can take on 3 values:
 I created this because it's easier to keep track of size with words than 
 corresponding integers.
 
-###Structs
+### Structs
 I created an IQ struct for Octopus. In here, it holds values that can 
 easily be accessed and contained under one category. 
 Inside IQ there are the following fields: 
@@ -69,12 +69,12 @@ Inside IQ there are the following fields:
 - Fights Won
 
 
-#####Smartness
+##### Smartness
 when an octopus reads a book it gets smartness values, same for when it 
 wins a fight.
-#####Books Read
+##### Books Read
 keeps track of the number of books read
-#####Fights Won
+##### Fights Won
 keeps track of the number of fights won
 
 Structs are kinda cool. I like them.
